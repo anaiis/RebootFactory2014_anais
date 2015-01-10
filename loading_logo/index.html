@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        
+  
+.loading-spinner {
+  
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-name: rotate;
+ 
+  -webkit-animation-timing-function: linear;
+ 
+  height: 200px;
+  width: 200px;
+  border: 8px solid #ffffff;
+
+  border-radius: 50%;
+  display: inline-block; 
+}
+         @-webkit-keyframes rotate {
+    from{opacity:0.001;
+    }
+    
+    to  {opacity:1; }
+  }
+body {
+  background: black;
+}
+
+    li{
+        list-style: none; 
+        width:100px;
+        position:relative;
+        margin-top:100px;
+        -webkit-perspective: 1000;
+        -webkit-backface-visibility: hidden;
+      
+    }
+    img.p1{
+        display:block;
+        position:absolute;
+        -webkit-animation-name: p1;
+        -webkit-animation-timing-function: ease;
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-duration: 3s;
+        transform-origin: 100% 100%;
+    }
+        img.p2{
+        display:block;
+        position:absolute; 
+        margin-left:28px;
+        margin-top:-5px;
+        -webkit-animation-name: p1;
+        -webkit-animation-timing-function: ease;
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-duration: 2s;
+        transform-origin: 50% 100%;
+    }
+        img.p3{
+        display:block;
+        position:absolute;
+        margin-left:50px;
+        -webkit-animation-name: p1;
+        -webkit-animation-timing-function: ease;
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-duration: 1s;
+        transform-origin: 0% 100%;
+    }
+   .p1{  
+    
+} 
+         @-webkit-keyframes p1 {
+    0% { -webkit-transform: rotateZ(0deg); 
+    opacity:1;}
+    50% { -webkit-transform: rotateZ(180deg);  opacity:0;  }
+    100%   { -webkit-transform: rotateZ(360deg); opacity:1;}
+  }
+
+
+.loading-spinner {
+  position: absolute;
+  top: 38%;
+  right: 0;
+  bottom: 0;
+  left: 37%;
+  margin: -60px 0 -60px;
+}
+#anim_lotus{
+ position: absolute;
+  top: 32%;
+  right: 0;
+  bottom: 0;
+  left: 38%;
+  margin: -60px 0 -60px;
+}
+</style>
+</head>
+
+<body>
+  <div class="loading-spinner"></div>
+    <div id="anim_lotus">
+    <ul>
+        <li>
+            <img class="p1" src="p_lef.png"/>
+        </li>
+        <li>
+            <img class="p2" src="p_ctr.png"/>
+        </li>
+        <li>
+            <img class="p3" src="p_rig.png"/>
+        </li>
+    </ul>
+</div>
+ 
+</body>
+
+</html>

@@ -102,6 +102,7 @@ body {
 </head>
 
 <body>
+    <div id="overlay">
   <div class="loading-spinner"></div>
     <div id="anim_lotus">
     <ul>
@@ -116,7 +117,15 @@ body {
         </li>
     </ul>
 </div>
- 
+ </div>
+    <script src="jquery-1.11.2.min"></script>
+   <script>
+    $(window).load(function(){
+   // PAGE IS FULLY LOADED  
+   // FADE OUT YOUR OVERLAYING DIV
+   $('#overlay').fadeOut();
+});
+       </script> 
 </body>
 
 </html>
